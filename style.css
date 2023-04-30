@@ -1,0 +1,61 @@
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    
+    /* add negative margin to overlap the previous row */
+    margin-top: -25px;
+  }
+  
+  /* remove negative margin from the first row */
+  .row:first-child {
+    margin-top: 0;
+  }
+  
+  .card-container {
+    width: 3.125rem; /* 50px / 16px = 3.125rem */
+    height: 4.6875rem; /* 75px / 16px = 4.6875rem */
+    border: 0.125rem solid black; /* 2px / 16px = 0.125rem */
+    margin: 0 0.625rem; /* 10px / 16px = 0.625rem */
+    position: relative;
+  }
+
+  .bottom-row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .deck-placeholder {
+    width: 3.125rem; /* 50px / 16px = 3.125rem */
+    height: 4.6875rem; /* 75px / 16px = 4.6875rem */
+    border: 0.125rem dashed black; /* dashed border */
+    margin-top: 10px;
+    position: relative;
+  }
+  
+  .deck-img {
+    position: absolute; /* position the deck relative to the deck-placeholder */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;  
+  }
+
+  .card-img {
+    position: absolute; /* position the deck relative to the deck-placeholder */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;  
+  }
