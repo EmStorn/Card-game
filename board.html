@@ -3,11 +3,39 @@
 <head>
 	<meta charset="UTF-8">
 	<title>My Card Game</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="game-container"></div>	  
-	<script src="board_creation.js"></script>
-	<script src="game_logic.js"></script>
+	<div id="icons">aaa</div>
+	<div id="game-container"></div>
+	<br>	 
+	<div id="logo">
+		<script src="logo.js"></script>
+	</div>
+	<br>
+	<button id="start-button">Start Game</button>
+	<button id="restart-button">Restart</button>
+	<br>
+	<button id="instructions-button">Instructions</button>
+	<div id="instructions-popup" class="popup-overlay">
+		<div class="popup-content">
+		  <h2>Instructions</h2>
+		  <p>The final goal is to eliminate all the cards from the pyramid.
+			 You have to select maximum two cards. The sum of the cards value must be 10.
+			 It can be achieved by matching for example 2 and 8. But also by a single 10.
+			 By clicking on the deck you can put on the board additional cards, to help matching.
+			 You can select only uncovered cards. To uncover a new card, you need to match the 2 card covering it.
+
+			 As the cards are randomly shuffled, it's not alway possible to win.
+			</p>
+		  <button id="close-popup">Close</button>
+		</div>
+	  </div>	
+	<script src="board_setup.js" type="module"></script>
+	<script src="messages_handling.js" type="module"></script>
+	<script src="game _logic.js" type="module"></script>
+	<script src="cards_elements_setup.js" type="module"></script>
+	<script src="main.js" type="module"></script>
 </body>
 </html>
