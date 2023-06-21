@@ -1,5 +1,4 @@
 import { turnCard, cardSelection, matchingAvailability } from './game _logic.js';
-import { winGamePopup } from './messages_handling.js';
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -102,7 +101,6 @@ function createInitialDeck() {
     deckElement.appendChild(deckImgElement);
   
     deckImgElement.addEventListener('click', function() {
-      console.log('deck pressed');
       const firstCard = initialDeck.shift();
       console.log(firstCard);
       const cardLocations = document.querySelectorAll('.card-container-uncovered');

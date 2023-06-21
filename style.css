@@ -213,6 +213,14 @@
   transform: translate(-50%, -50%);
 }
 
+#game-over-popup {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #logo {
   display: flex;
   justify-content: center;

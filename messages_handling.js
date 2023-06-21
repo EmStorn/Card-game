@@ -38,5 +38,38 @@ function winGamePopup(restartFunction) {
   winGamePopup.appendChild(popupContent);
 
   gameContainer.appendChild(winGamePopup);   
+  }
+
+
+// Function to create a popup that explain that no more possible moves are available
+function gameOverPopup(restartFunction) {
+  const gameContainer = document.getElementById('game-container');
+
+  const gameOverPopup = document.createElement('div');
+  gameOverPopup.id = 'game-over-popup';
+  gameOverPopup.classList.add('popup-overlay');
+
+  gameContainer.appendChild(gameOverPopup);
+
+  const popupContent = document.createElement('div');
+  popupContent.classList.add('popup-content');
+
+  const instructionsText = document.createElement('p');
+  instructionsText.textContent = 'There are no more possible matches, restart to try again.';
+
+  const restartButton = document.createElement('button');
+  restartButton.textContent = 'Restart';
+  restartButton.id = 'restart-button';
+  restartButton.style.display = 'block';
+  restartButton.addEventListener('click', restartFunction);
+
+  popupContent.appendChild(instructionsText);
+  popupContent.appendChild(restartButton);
+
+  gameOverPopup.appendChild(popupContent);
+
+  gameContainer.appendChild(gameOverPopup);   
 }
-export { showInstructionsPopup, hideInstructionsPopup, winGamePopup };  
+
+
+export { showInstructionsPopup, hideInstructionsPopup, winGamePopup, gameOverPopup };  
